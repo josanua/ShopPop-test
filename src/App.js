@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import IndexPage from './pages/Index';
+import ConversationRow from './components/ConversationRow/ConversationRow';
 
 function App() {
   return (
-   <IndexPage />
+    <ConversationRow />
   );
 }
 
