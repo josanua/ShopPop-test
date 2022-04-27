@@ -21,6 +21,38 @@ const mocksData = [
         type: 'Viber',
         state: 'just now',
         message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
+        open: true
+    }, 
+    {
+        id: 4,
+        name: 'Johny',
+        type: 'Viber',
+        state: 'just now',
+        message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
+        open: true
+    }, 
+    {
+        id: 5,
+        name: 'Johny',
+        type: 'Viber',
+        state: 'just now',
+        message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
+        open: true
+    }, 
+    {
+        id: 6,
+        name: 'Johny',
+        type: 'Viber',
+        state: 'just now',
+        message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
+        open: false
+    }, 
+    {
+        id: 7,
+        name: 'Johny',
+        type: 'Viber',
+        state: 'just now',
+        message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
         open: false
     }, 
 ];

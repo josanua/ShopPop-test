@@ -14,17 +14,27 @@
   margin: 15px 10px;
 }
 
-.conversation-item-row .header-data {
+.conversation-item-row .header-meta-data {
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
   display: flex;
+  justify-content:space-between;
 }
 
-.conversation-item-row .header-data .user-name {
+.conversation-item-row .header-meta-data .user-name {
   color: #454545;
-  padding-right: 10px;
+  padding-right: 5px;
+}
+
+.conversation-item-row .header-meta-data {
+  color: #888888;
+}
+
+.conversation-item-row .header-meta-data .user-messenger-type{
+  padding: 0 5px;
+  color: #25D366;
 }
 
 .conversation-item-row p.user-message {
@@ -40,13 +50,17 @@
   margin: 18px 0;
   display: flex;
   text-align: center;
+  justify-content: center;
 }
 .filter-btn{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
   width: 100px;
   height: 34px;
   background-color: #fff;
   border: none;
-  margin: auto;
+  border: 2px solid #F5F5F5;
 }
 .filter-btn.active {
   background-color: #F5F5F5;

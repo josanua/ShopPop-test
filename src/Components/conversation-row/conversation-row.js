@@ -9,14 +9,19 @@ const ConversationItemRow = ({item, active, setSelectedId}) => {
     const [selected, setSelected] = useState(false);
 
     return (
-        <div className={`conversation-item-row${selected? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
-            <div className='header-data'>
-                <span className='user-name'>{name}</span>
-                <span className={`user-messenger-type ${type}-message`}>{type}</span>
-                <span className='user-messenger-state-text'>{state}</span>
+        <div className={`conversation-item-row ${selected? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
+            <div className='header-meta-data'>
+                <div>
+                    <span className='user-name'>{name}</span>
+                    <span className='via-text'>via</span>
+                    <span className={`user-messenger-type ${type}-message`}>{type}</span>
+                </div>
+                <div>
+                    <span className='user-messenger-state-text'>{state}</span>
+                </div>
             </div>
             {active && <div>Is selected</div>}
-            <p className='user-message' dangerouslySetInnerHTML={{__html: message || ''}}/>
+            <p className='user-message' dangerouslySetInnerHTML={{__html: message || ''}} />
         </div>
     );
 }
