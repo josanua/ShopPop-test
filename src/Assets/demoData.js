@@ -25,5 +25,4 @@ const mocksData = [
     }, 
 ];
 
-
 export default mocksData

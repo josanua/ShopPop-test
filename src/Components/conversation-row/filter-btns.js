@@ -1,9 +1,8 @@
-
 const FilterBtns = ({ open, setOpenState }) => {
     return (
-        <div>
+        <div className="filter-btns">
             <button className={`filter-btn${open ? ' active' : ''}`} onClick={() => setOpenState(true)}>Open</button>
-            <button className={`filter-btn${!open ? ' active' : ''}`} onClick={() => setOpenState(false)}>Close</button>
+            <button className={`filter-btn${!open ? ' active' : ''}`} onClick={() => setOpenState(false)}>Closed</button>
         </div>
     )
 }

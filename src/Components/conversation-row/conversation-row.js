@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import FilterBtns from './FilterBtns';
-import mocksData from '../../mocks';
-import './conversationRow.css';
+import FilterBtns from './filter-btns';
+import mocksData from '../../Assets/demoData';
+import './conversation-row.css';
 
 
 const ConversationItemRow = ({item, active, setSelectedId}) => {
@@ -9,7 +9,7 @@ const ConversationItemRow = ({item, active, setSelectedId}) => {
     const [selected, setSelected] = useState(false);
 
     return (
-        <div className={`conversation-box${selected? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
+        <div className={`conversation-item-row${selected? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
             <div className='header-data'>
                 <span className='user-name'>{name}</span>
                 <span className={`user-messenger-type ${type}-message`}>{type}</span>
@@ -30,7 +30,7 @@ const ConversationRow = () => {
     const selectedMessage = mocksData.find(item => item.id === selectedId);
 
     return (
-        <div>
+        <div className='conversation-row'>
             <FilterBtns open={openState} setOpenState={setOpenState} />
             {selectedData.map((mockItem) => {
                 return (

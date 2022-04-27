@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import ConversationItemRow from '../components/ConversationRow/ConversationRow';
-import FilterBtns from '../components/ConversationRow/FilterBtns';
-import mocksData from '../mocks';
+import ConversationItemRow from '../Components/ConversationRow/ConversationRow';
+import FilterBtns from '../Components/ConversationRow/FilterBtns';
+import mocksData from '../Assets/demoData';
 
 const IndexPage = () => {
   const [openState, setOpenState] = useState(true);
