@@ -10,6 +10,7 @@
 
 # production
 /build
+/test-component.code-workspace
 
 # misc
 .DS_Store
