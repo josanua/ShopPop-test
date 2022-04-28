@@ -4,7 +4,7 @@ const mocksData = [
         name: 'John Do',
         type: 'WhatsApp',
         state: 'just now',
-        message: '<p>Hey, how are you doing? I\'ve got a question...</p>',
+        message: '<p>Hey, how are you doing? I\'ve got a question... fdfsd vvdsdv  ssdf sd</p>',
         open: true,
     }, 
     {

@@ -4,12 +4,12 @@ import mocksData from '../../Assets/demoData';
 import './conversation-row.css';
 
 
-const ConversationItemRow = ({item, active, setSelectedId}) => {
+const ConversationItemRow = ({ item, active, setSelectedId }) => {
     const { name, message, state, type, id } = item;
     const [selected, setSelected] = useState(false);
 
     return (
-        <div className={`conversation-item-row ${selected? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
+        <div className={`conversation-item-row${selected ? ' active' : ''}`} onClick={() => setSelected(state => !state)}>
             <div className='header-meta-data'>
                 <div>
                     <span className='user-name'>{name}</span>
@@ -19,9 +19,14 @@ const ConversationItemRow = ({item, active, setSelectedId}) => {
                 <div>
                     <span className='user-messenger-state-text'>{state}</span>
                 </div>
+
             </div>
-            {active && <div>Is selected</div>}
-            <p className='user-message' dangerouslySetInnerHTML={{__html: message || ''}} />
+            {/* {active && <div>Is selected</div>} */}
+            <div className='user-message' dangerouslySetInnerHTML={{ __html: message || '' }} />
+            <div className='right-view-options'>
+                <div className='people-icon'></div>
+                <div className='checkmark-icon'></div>
+            </div>
         </div>
     );
 }
@@ -29,7 +34,7 @@ const ConversationItemRow = ({item, active, setSelectedId}) => {
 const ConversationRow = () => {
     const [openState, setOpenState] = useState(true);
     const [selectedId, setSelectedId] = useState(null);
-    
+
     // check item state
     const selectedData = mocksData.filter((item) => item.open === openState);
     const selectedMessage = mocksData.find(item => item.id === selectedId);
